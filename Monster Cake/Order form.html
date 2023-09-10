@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+
+    <style>
+
+        label{ margin: 10px 50px ;}
+
+        button{margin: 10px 100px;
+            padding: 100px 200px 30px ;
+        }
+
+        a{margin-bottom: 20px;}
+
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+
+<body>
+    
+   <div class="container">
+
+    <form id="form" method="get">
+
+        <label for="name">Cake Name:</label>
+        <input type="text" id="cakeName" name="cakeName" placeholder="Please enter the cake you wnat to order.">
+        <br>
+        <label for="quantity"> Cake Servings:</label>
+        <input type="number" id="cakeServings" name="cakeSevings" placeholder="Enter the amount of people this cake will feed.">
+        <br>
+        <label for="time">Delivery Date:</label>
+        <input type="date" id="deliveryTime" name="deliveryTime">
+        <br>
+        <button type="submit" class="btn btn-outline-success" onclick="submit()">Submit</button>
+
+    </form>
+
+   </div> 
+
+<script>
+    var form = document.getElementById('form')
+
+    form.addEventListener('submit',function(event){
+        event.preventDefault()
+
+        var cakeName = document.getElementById('cakeName').value
+
+        console.log(cakeName)
+
+        var cakeServings = document.getElementById('cakeServings').value
+
+        console.log(cakeServings)
+
+        var deliveryTime = document.getElementById('deliveryTime').value
+
+        console.log(deliveryTime)
+
+        function onclick(){
+            alert('Thank You for ordering. Your command has been received and will be soon be prepared. we will inform you soon, when the cake is ready');
+        }
+        
+
+    })
+</script>    
+
+  <br>
+  <a class="btn btn-outline-primary" href="./Contact Us.html" role="button">Back</a>
+  <br>
+  <a class="btn btn-primary btn btn-danger" href="./Monster_Cake.MU.html" role="button">Home</a>
+
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
